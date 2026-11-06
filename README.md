@@ -1,31 +1,35 @@
-# Kumar Boda Videos
+# Kumar Boda Videos — Automatic YouTube Updates
 
-A responsive YouTube video showcase website built with HTML, CSS and JavaScript.
+This GitHub Pages website fetches the latest public uploads from `@KUMARBODA` using the YouTube Data API v3. It displays video thumbnails, titles, descriptions, publish dates and links. New uploads appear when visitors reload the page (YouTube API quota and caching may affect timing).
 
-## Features
-- Responsive layout for desktop and mobile
-- Video cards linking to YouTube
-- Search videos by title
-- Filter by Vlogs, Entertainment and Motivation
-- No build tools or dependencies required
+## One-time setup: create a YouTube API key
+1. Open https://console.cloud.google.com/
+2. Sign in with a Google account.
+3. Create or select a Google Cloud project.
+4. Open **APIs & Services → Library**.
+5. Search for **YouTube Data API v3** and click **Enable**.
+6. Open **APIs & Services → Credentials → Create credentials → API key**.
+7. Copy the API key.
+8. Open `script.js` in this GitHub repository and replace `PASTE_YOUTUBE_DATA_API_KEY_HERE` with your key.
+9. Commit the change.
 
-## Add your own YouTube videos
-1. Open `script.js`.
-2. Find the `videos` array.
-3. Replace each sample `id` with the ID from your YouTube video URL.
-   - For `https://www.youtube.com/watch?v=VIDEO_ID`, copy the part after `v=`.
-4. Change the title and category as needed.
+## Important: restrict your API key
+The key is visible to visitors because this is a static GitHub Pages site. In Google Cloud Console → Credentials → select the key:
+- Under **API restrictions**, choose **Restrict key** and select **YouTube Data API v3**.
+- Under **Website restrictions / HTTP referrers**, add your GitHub Pages domain, for example `https://bodakumar93.github.io/*`.
+- Save the restrictions.
 
-## Run locally
-Open `index.html` in your browser.
+Never share an unrestricted API key publicly.
 
-## Publish with GitHub Pages
-1. Create a **Public** repository on GitHub.
-2. Upload `index.html`, `style.css`, `script.js`, and `README.md`.
-3. Open repository **Settings → Pages**.
-4. Under Build and deployment, choose **Deploy from a branch**.
-5. Select branch **main** and folder **/(root)**, then Save.
-6. Wait a minute and open the published Pages URL shown there.
+## Shorts and long videos
+The site automatically separates videos by duration: 180 seconds or less are placed in Shorts; longer videos go under Long Videos. This is an approximate rule because YouTube's API does not provide a definitive Shorts flag for every upload. You can adjust the threshold in `script.js` if desired.
 
-## Customize
-Change the channel name, description, and YouTube channel link in `index.html`.
+## Publish
+After committing all files, GitHub Pages serves the site at:
+https://bodakumar93.github.io/kumar-boda-video/
+
+## Notes
+- Only public uploads are returned.
+- The page loads the latest 50 uploads.
+- Descriptions are displayed with a short preview; visitors can open the video on YouTube for the full details.
+- YouTube Data API quota and Google API key restrictions apply.

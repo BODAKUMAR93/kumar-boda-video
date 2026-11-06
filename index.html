@@ -1,55 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kumar Boda Videos — vlogs, entertainment and motivation.">
-  <title>Kumar Boda Videos</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kumar Boda YouTube Shorts and long videos, with video descriptions.">
+<title>Kumar Boda Videos</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#"><span class="play-mark">▶</span> Kumar Boda <b>Videos</b></a>
-    <nav><a href="#home">Home</a><a href="#videos">Videos</a><a href="#about">About</a></nav>
-    <a class="subscribe" href="https://www.youtube.com/" target="_blank" rel="noopener">Subscribe</a>
-  </header>
-
-  <main id="home">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">WELCOME TO MY CHANNEL</p>
-        <h1>Stories, moments<br><span>and inspiration.</span></h1>
-        <p class="intro">Watch the latest vlogs, entertainment and motivational videos from Kumar Boda Videos.</p>
-        <a class="primary-btn" href="#videos">Explore videos <span>→</span></a>
-      </div>
-      <div class="hero-art" aria-label="Video play illustration">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="screen"><div class="screen-play">▶</div><small>YOUR NEXT FAVORITE VIDEO</small></div>
-      </div>
-    </section>
-
-    <section class="section" id="videos">
-      <div class="section-heading">
-        <div><p class="eyebrow">WATCH NOW</p><h2>Latest videos</h2></div>
-        <input id="search" type="search" placeholder="Search videos..." aria-label="Search videos">
-      </div>
-      <div class="filters" role="group" aria-label="Filter videos">
-        <button class="filter active" data-category="All">All</button>
-        <button class="filter" data-category="Vlogs">Vlogs</button>
-        <button class="filter" data-category="Entertainment">Entertainment</button>
-        <button class="filter" data-category="Motivation">Motivation</button>
-      </div>
-      <div class="video-grid" id="videoGrid"></div>
-      <p class="hint">To add your videos, edit the <code>videos</code> list in <code>script.js</code> and paste your YouTube video IDs.</p>
-    </section>
-
-    <section class="about" id="about">
-      <div><p class="eyebrow">A LITTLE ABOUT US</p><h2>Welcome to<br>Kumar Boda Videos.</h2></div>
-      <p>A place for everyday vlogs, entertaining moments and positive thoughts. Subscribe and be part of the journey!</p>
-    </section>
-  </main>
-
-  <footer><a class="brand" href="#"><span class="play-mark">▶</span> Kumar Boda <b>Videos</b></a><span>© <span id="year"></span> Kumar Boda Videos</span></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<header class="topbar">
+  <a class="brand" href="#"><span class="play-mark">▶</span> Kumar Boda <b>Videos</b></a>
+  <nav><a href="#shorts">Shorts</a><a href="#long-videos">Long Videos</a></nav>
+  <a class="subscribe" href="https://www.youtube.com/@KUMARBODA" target="_blank" rel="noopener">Subscribe</a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">OFFICIAL YOUTUBE CHANNEL</p>
+  <h1>Watch. Enjoy.<br><span>Get inspired.</span></h1>
+  <p class="intro">Latest videos from Kumar Boda, automatically loaded from YouTube with titles and descriptions.</p>
+  <a class="primary-btn" href="https://www.youtube.com/@KUMARBODA" target="_blank" rel="noopener">Visit YouTube channel ↗</a></div>
+  <div class="hero-art"><div class="screen"><div class="screen-play">▶</div><small>KUMAR BODA</small></div></div>
+</section>
+<div id="status" class="status">Loading videos from YouTube…</div>
+<section class="section" id="shorts"><div class="section-heading"><div><p class="eyebrow">QUICK WATCH</p><h2>YouTube Shorts</h2></div><span class="section-note">Short-form videos</span></div><div class="video-grid" id="shortsGrid"></div></section>
+<section class="section long-section" id="long-videos"><div class="section-heading"><div><p class="eyebrow">WATCH MORE</p><h2>Long Videos</h2></div><span class="section-note">Full videos and vlogs</span></div><div class="video-grid" id="longGrid"></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="play-mark">▶</span> Kumar Boda <b>Videos</b></a><span>© <span id="year"></span> Kumar Boda Videos</span></footer>
+<script src="script.js"></script>
+</body></html>
